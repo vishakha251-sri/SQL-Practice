@@ -129,4 +129,31 @@ FROM employees
 WHERE salary NOT  BETWEEN 30000 AND 50000;
 
 
+-- ------------------------------------------------
+-- TOPIC 5: LIKE
+-- ------------------------------------------------
 
+-- Q1: Show employees whose name starts with 'R'
+SELECT *
+FROM employees
+WHERE name LIKE 'R%';
+
+-- Q2: Show employees whose name ends with 'a'
+SELECT *
+FROM employees
+WHERE name LIKE '%a';
+
+-- Q3: Show employees whose name contains 'an'
+SELECT *
+FROM employees
+WHERE name LIKE '%an%';
+
+-- Q4: Show employees whose city starts with 'B'
+SELECT *
+FROM employees
+WHERE city LIKE 'B%';
+
+-- Q5: Show employees whose name starts with 'R' or ends with 'a'
+SELECT *
+FROM employees
+WHERE name LIKE 'R%' OR  name LIKE '%a';
