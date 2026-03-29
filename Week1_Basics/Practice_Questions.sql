@@ -59,6 +59,39 @@ FROM employees
 WHERE department = 'HR' AND (age < 25 OR age > 30);
 
 
+-- ------------------------------------------------
+-- TOPIC 3: IN & NOT IN
+-- ------------------------------------------------
+
+-- Q1: Show all employees from Delhi, Mumbai or Bangalore
+SELECT *
+FROM employees
+WHERE city IN ('Delhi', 'Mumbai', 'Bangalore');
+
+
+-- Q2: Show employees from IT, HR or Finance department
+SELECT *
+FROM employees
+WHERE department IN ('IT', 'HR', 'Finance');
+
+
+-- Q3: Show employees who are NOT from Delhi or Mumbai
+SELECT *
+FROM employees
+WHERE city NOT IN ('Delhi', 'Mumbai');
+
+
+-- Q4: Show employees whose department is NOT IT or Finance
+SELECT *
+FROM employees
+WHERE department NOT IN ('IT', 'Finance');
+
+-- Q5: Show name and salary of employees from IT or Marketing
+--     department whose salary is greater than 45000
+SELECT name, salary
+FROM employees
+WHERE department IN ('IT', 'Marketing') AND salary > 45000;
+
 
 
 
