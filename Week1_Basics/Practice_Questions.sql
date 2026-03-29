@@ -157,3 +157,37 @@ WHERE city LIKE 'B%';
 SELECT *
 FROM employees
 WHERE name LIKE 'R%' OR  name LIKE '%a';
+
+
+-- ------------------------------------------------
+-- TOPIC 6: ORDER BY & LIMIT
+-- ------------------------------------------------
+
+-- Q1: Show all employees sorted by salary highest to lowest
+SELECT *
+FROM employees
+ORDER BY salary DESC;
+
+
+-- Q2: Show top 3 highest paid employees
+SELECT *
+FROM employees
+ORDER BY salary DESC LIMIT 3;
+
+-- Q3: Show top 5 youngest employees
+SELECT *
+FROM employees
+ORDER BY age ASC LIMIT 5;
+
+
+-- Q4: Show employees from Delhi sorted by name A to Z
+SELECT *
+FROM employees
+WHERE city = 'Delhi'
+ORDER BY name ASC;
+
+-- Q5: Show bottom 3 lowest paid employees
+SELECT *
+FROM employees
+ORDER BY salary ASC LIMIT 3;
+
