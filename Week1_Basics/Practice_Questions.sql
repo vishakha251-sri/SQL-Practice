@@ -229,3 +229,35 @@ GROUP BY city
 HAVING COUNT(*) > 2;
 
 
+-- ------------------------------------------------
+-- TOPIC 8: AGGREGATE FUNCTIONS
+-- ------------------------------------------------
+
+-- Q1: Show total number of employees
+SELECT  COUNT(*)
+FROM employees;
+
+
+-- Q2: Show highest salary in the company
+SELECT  MAX(salary)
+FROM employees;
+
+-- Q3: Show lowest salary in the company
+SELECT  MIN(salary)
+FROM employees;
+
+-- Q4: Show average age of all employees
+SELECT  AVG(age)
+FROM employees;
+
+
+-- Q5: Show total salary of IT department
+SELECT SUM(salary)
+FROM employees
+WHERE department = 'IT';
+
+
+
+
+
+
