@@ -93,7 +93,40 @@ FROM employees
 WHERE department IN ('IT', 'Marketing') AND salary > 45000;
 
 
+-- ------------------------------------------------
+-- TOPIC 4: BETWEEN
+-- ------------------------------------------------
 
+-- Q1: Show employees whose salary is between 30000 and 60000
+SELECT *
+FROM employees
+WHERE salary BETWEEN 30000 AND 60000;
+
+
+-- Q2: Show employees whose age is between 25 and 30
+SELECT *
+FROM employees
+WHERE age BETWEEN 25 AND 30;
+
+
+-- Q3: Show name and department of employees whose salary 
+--     is between 45000 and 70000
+SELECT name, department
+FROM employees
+WHERE salary BETWEEN 45000 AND 70000;
+
+
+-- Q4: Show employees whose age is between 22 and 28 
+--     and are from Delhi
+SELECT *
+FROM employees
+WHERE age BETWEEN 22 AND 28 AND city = 'Delhi';
+
+
+-- Q5: Show employees whose salary is NOT between 30000 and 50000
+SELECT *
+FROM employees
+WHERE salary NOT  BETWEEN 30000 AND 50000;
 
 
 
