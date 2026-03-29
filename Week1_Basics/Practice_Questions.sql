@@ -191,3 +191,41 @@ SELECT *
 FROM employees
 ORDER BY salary ASC LIMIT 3;
 
+
+-- ------------------------------------------------
+-- TOPIC 7: GROUP BY & HAVING
+-- ------------------------------------------------
+
+-- Q1: Show count of employees in each department
+SELECT department, count(*)
+FROM employees
+GROUP BY department;
+
+
+-- Q2: Show average salary of each city
+SELECT city, AVG(salary)
+FROM employees
+GROUP BY city;
+
+
+-- Q3: Show total salary of each department
+SELECT department, SUM(salary)
+FROM employees
+GROUP BY department;
+
+
+-- Q4: Show department where average salary is greater than 40000
+SELECT department, AVG(salary)
+FROM employees
+GROUP BY department
+HAVING AVG(salary) > 40000;
+
+
+
+-- Q5: Show cities where count of employees is greater than 2
+SELECT city, COUNT(*)
+FROM employees
+GROUP BY city
+HAVING COUNT(*) > 2;
+
+
